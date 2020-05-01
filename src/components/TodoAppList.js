@@ -3,6 +3,12 @@ import TodoAppListItem from "./TodoAppListItem";
 import {connect} from "react-redux";
 
 const TodoAppList = ({todos}) => {
+
+  
+   
+
+
+    
     return (
         <div>
             {
@@ -17,8 +23,10 @@ const TodoAppList = ({todos}) => {
 const mapStateToProps = (state) => {
     return {
         todos: state.todoReducer
+        
     }
 }
+
 
 
 export default connect(mapStateToProps)(TodoAppList);

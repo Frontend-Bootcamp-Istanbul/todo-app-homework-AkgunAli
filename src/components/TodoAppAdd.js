@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {addTodo} from "../redux/actions";
+import { Button } from 'reactstrap';
 
 class TodoAppAdd extends Component{
     constructor(props){
@@ -20,6 +21,7 @@ class TodoAppAdd extends Component{
                     // statete tuttugum inputu son degerini aliyorum
                     const newContent = this.state.value;
                     this.props.addTodo(newContent);
+
                 }}>
                     <input
                         type="text"
@@ -31,7 +33,7 @@ class TodoAppAdd extends Component{
                             })
                         }}
                     />
-                    <button type="submit">Todo Ekle</button>
+                    <Button type="submit"  color="primary">Todo Ekle</Button>
                 </form>
             </div>
         );
